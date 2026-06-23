@@ -517,12 +517,18 @@
     .team { background: var(--white); padding: 96px 10%; }
     .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 56px; }
     .team-img-card {
-      background: var(--bg); border: 1px dashed var(--dark-20); aspect-ratio: 3/4;
+      background: var(--bg); border: 1px solid var(--dark-20); aspect-ratio: 3/4;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       gap: 12px; color: var(--dark-50);
       font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      overflow: hidden;
     }
-    .team-img-card svg { width: 32px; height: 32px; stroke: var(--dark-20); fill: none; stroke-width: 1; }
+    .team-img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .team-img-label { margin-top: 16px; font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--dark); }
     .team-img-role { font-size: 12px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-top: 4px; }
 
@@ -966,19 +972,17 @@
   <div class="team-grid">
     <div class="reveal-left">
       <div class="team-img-card">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        Foto del profesional 1
+        <img src="Claudia-Puga.jpg" alt="Claudia Elizabeth Puga Ramirez, Abogada Fiscal" loading="lazy" />
       </div>
-      <div class="team-img-label">Nombre del Profesional</div>
-      <div class="team-img-role">Contador Público Certificado</div>
+      <div class="team-img-label">Claudia Elizabeth Puga Ramirez</div>
+      <div class="team-img-role">Abogada Fiscal</div>
     </div>
     <div class="reveal-right">
       <div class="team-img-card">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        Foto del profesional 2
+        <img src="Alicia-Puga.jpg" alt="Alicia Puga Ramirez, Administración estratégica de los negocios" loading="lazy" />
       </div>
-      <div class="team-img-label">Nombre del Profesional</div>
-      <div class="team-img-role">Abogado Corporativo</div>
+      <div class="team-img-label">Alicia Puga Ramirez</div>
+      <div class="team-img-role">Administración estratégica de los negocios</div>
     </div>
   </div>
 </section>
